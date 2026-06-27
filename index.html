@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemoryOn – Ofertas Diárias</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #f0f2f5; /* Cor de fundo padrão caso a imagem não carregue */
+        }
+        .main-container {
+            position: relative;
+            width: 100%;
+            min-height: 100vh; /* Garante que o container ocupe a altura total da viewport */
+            background-image: url("https://daily-offers.shop/wp-content/uploads/2026/03/Captura-de-tela-2026-03-25-165019.png");
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover; /* Garante que a imagem cubra todo o container */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .ccw-banner {
+            position: relative;
+            max-width: 500px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 25px;
+            border-radius: 20px;
+            background: #10365C; /* Cor de fundo do banner de cookies */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            color: #FFFFFF;
+            direction: ltr;
+        }
+        .ccw-title {
+            margin: 0 0 10px 0;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .ccw-text {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0 0 20px 0;
+        }
+        .ccw-actions {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .ccw-btn {
+            display: inline-block;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            color: #fff;
+            user-select: none;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .ccw-btn-primary {
+            background: linear-gradient(135deg,#28a745,#45c76a); /* Cor do botão 'Yes' */
+        }
+        .ccw-btn-secondary {
+            background: linear-gradient(135deg,#dc3545,#f25a67); /* Cor do botão 'No' */
+        }
+        .ccw-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        }
+        .ccw-close {
+            position: absolute;
+            top: 10px;
+            right: 12px;
+            background: transparent;
+            border: 0;
+            color: #FFFFFF;
+            font-size: 24px;
+            line-height: 1;
+            cursor: pointer;
+            padding: 4px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .ccw-close:hover {
+            background: #f1f1f1;
+            color: #000;
+            transform: rotate(90deg);
+        }
+        .seo-content-toggle {
+            background: none;
+            border: 0;
+            padding: 0;
+            margin: 20px auto;
+            color: #007bff;
+            font-size: 14px;
+            cursor: pointer;
+            display: block;
+            text-decoration: underline;
+            font-weight: normal;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .seo-content {
+            display: none; /* Escondido por padrão */
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            line-height: 1.6;
+            color: #333;
+        }
+        .seo-content h2, .seo-content h3 {
+            color: #10365C;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        @media (max-width: 768px) {
+            .ccw-banner {
+                padding: 15px;
+            }
+            .ccw-title {
+                font-size: 20px;
+            }
+            .ccw-text {
+                font-size: 14px;
+            }
+            .ccw-actions {
+                flex-direction: column;
+            }
+            .ccw-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="ccw-banner">
+            <a href="#" class="ccw-close" aria-label="Fechar banner de cookies">×</a>
+            <h3 class="ccw-title">Cookies e Privacidade</h3>
+            <p class="ccw-text">Usamos cookies para melhorar sua experiência de navegação. Você aceita o uso de cookies?</p>
+            <div class="ccw-actions">
+                <a href="YOUR_AFFILIATE_LINK_HERE" class="ccw-btn ccw-btn-primary">Sim</a>
+                <a href="YOUR_AFFILIATE_LINK_HERE" class="ccw-btn ccw-btn-secondary">Não</a>
+            </div>
+        </div>
+    </div>
+
+    <button class="seo-content-toggle" id="toggleSeoContent">Ver Detalhes da Oferta</button>
+
+    <div class="seo-content" id="seoContent">
+        <h2>MemoryON $49.98 com $774.12 de Desconto e Garantia de 60 Dias</h2>
+        <p>MemoryON é um suplemento de suporte cerebral de alto desempenho premium, especificamente formulado para melhorar a retenção da memória, o foco cognitivo e a clareza mental geral. Ao aproveitar esta oferta exclusiva, você pode garantir seu suprimento de MemoryON por apenas $49.98, representando um enorme desconto de $774.12 sobre o preço de varejo padrão para nossos pacotes de várias garrafas. Esta fórmula natural não é OGM e é fabricada com os mais altos padrões de qualidade para aqueles que buscam o pico de desempenho cognitivo diário.</p>
+
+        <h2>Visão Geral da Oferta Oficial</h2>
+        <p>A oferta oficial do MemoryON foi projetada para fornecer o máximo valor aos nossos clientes. Inclui frete rápido e gratuito em todo o Brasil, garantindo que seu pedido chegue prontamente sem custo adicional. Ao comprar através do link oficial do site fornecido, você tem a garantia de receber a fórmula autêntica do MemoryON, apoiada pelo nosso suporte direto ao cliente e pela oportunidade de economia total de $774.12.</p>
+
+        <h2>Detalhes de Preços e Descontos</h2>
+        <p>Atualmente, estamos oferecendo uma redução significativa de preço para tornar a saúde cerebral acessível. Você pode adquirir MemoryON por apenas $49.98 por garrafa em nossos pacotes mais populares. A economia total de $774.12 é aplicada automaticamente no checkout ao selecionar o suprimento recomendado. Todos os preços estão listados em USD ($) e representam uma oportunidade por tempo limitado para estocar esta fórmula avançada de suporte cognitivo.</p>
+
+        <h2>Envio e Política de Reembolso de 60 Dias</h2>
+        <p>Sua compra é totalmente sem riscos. Cada pedido de MemoryON é protegido por nossa garantia de devolução do dinheiro em 60 dias. Se você não experimentar o foco e a clareza que espera, basta entrar em contato conosco dentro de 60 dias para um reembolso total do seu preço de compra. Além disso, todos os pedidos qualificados incluem frete rápido e gratuito, com informações de rastreamento fornecidas assim que seu pacote sair do nosso armazém.</p>
+
+        <h2>Perguntas Frequentes (FAQ)</h2>
+
+        <h3>Quanto posso economizar no MemoryON hoje?</h3>
+        <p>Hoje você pode economizar até $774.12 ao comprar nossos pacotes de várias garrafas. Uma única garrafa custa a partir de apenas $49.98, proporcionando um dos melhores valores no mercado de suplementos cognitivos.</p>
+
+        <h3>Quanto tempo leva o frete grátis?</h3>
+        <p>Nosso frete rápido e gratuito geralmente entrega seu pedido MemoryON dentro de 3 a 5 dias úteis em qualquer lugar do Brasil, dependendo da sua localização.</p>
+
+        <h3>E se o MemoryON não funcionar para mim?</h3>
+        <p>Oferecemos uma garantia de devolução do dinheiro em 60 dias. Se você estiver insatisfeito por qualquer motivo, poderá devolver o produto dentro de 60 dias para um reembolso completo, sem perguntas.</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleButton = document.getElementById('toggleSeoContent');
+            const seoContent = document.getElementById('seoContent');
+            const affiliateLink = "YOUR_AFFILIATE_LINK_HERE"; // Substitua pelo seu link de afiliado
+
+            // Redirecionar botões do cookie banner
+            document.querySelectorAll('.ccw-actions .ccw-btn').forEach(button => {
+                button.href = affiliateLink;
+            });
+            document.querySelector('.ccw-close').href = affiliateLink;
+
+            toggleButton.addEventListener('click', function() {
+                if (seoContent.style.display === 'none' || seoContent.style.display === '') {
+                    seoContent.style.display = 'block';
+                    toggleButton.textContent = 'Ocultar Detalhes da Oferta';
+                } else {
+                    seoContent.style.display = 'none';
+                    toggleButton.textContent = 'Ver Detalhes da Oferta';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
