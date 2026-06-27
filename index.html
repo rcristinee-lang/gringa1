@@ -26,30 +26,31 @@
             background-size: cover;
             display: flex;
             justify-content: center;
-            align-items: center;
-            padding: 20px;
+            align-items: flex-end; 
+            padding: 20px 20px 18vh 20px; /* AJUSTE FINO: Reduzido de 22vh para 18vh para descer "só mais um pouquinho" */
         }
         .ccw-banner {
             position: relative;
-            max-width: 480px;
+            max-width: 420px;
             width: 100%;
-            padding: 30px 25px;
+            padding: 20px 25px;
             border-radius: 20px;
             background: #10365C;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             text-align: center;
             color: #FFFFFF;
             z-index: 10;
+            box-sizing: border-box;
         }
         .ccw-title {
-            margin: 0 0 12px 0;
-            font-size: 24px;
+            margin: 0 0 10px 0;
+            font-size: 22px;
             font-weight: 600;
         }
         .ccw-text {
-            font-size: 16px;
-            line-height: 1.5;
-            margin: 0 0 25px 0;
+            font-size: 15px;
+            line-height: 1.4;
+            margin: 0 0 20px 0;
             opacity: 0.9;
         }
         .ccw-actions {
@@ -58,7 +59,7 @@
             gap: 15px;
         }
         .ccw-btn {
-            flex: 1; /* Botões dividem o espaço igualmente no desktop */
+            flex: 1;
             display: inline-block;
             padding: 12px 20px;
             border: none;
@@ -101,13 +102,17 @@
             border: 0;
             padding: 15px;
             margin: 10px auto;
-            color: #007bff;
-            font-size: 14px;
+            color: #999999;
+            font-size: 12px;
             cursor: pointer;
             display: block;
             text-decoration: underline;
             text-align: center;
             width: 100%;
+            opacity: 0.7;
+        }
+        .seo-content-toggle:hover {
+            opacity: 1;
         }
         .seo-content {
             display: none;
@@ -127,25 +132,25 @@
         /* AJUSTES MOBILE CRÍTICOS */
         @media (max-width: 480px) {
             .main-container {
-                padding: 15px; /* Menos espaço externo no mobile */
+                padding: 15px 15px 15vh 15px; /* Ajuste fino no mobile também */
             }
             .ccw-banner {
-                padding: 25px 20px; /* Reduz padding interno para sobrar espaço para os botões */
+                padding: 15px 20px;
                 border-radius: 15px;
             }
             .ccw-title {
-                font-size: 21px;
+                font-size: 19px;
             }
             .ccw-text {
-                font-size: 15px;
+                font-size: 14px;
             }
             .ccw-actions {
-                flex-direction: column; /* Empilha os botões no mobile */
+                flex-direction: column;
                 gap: 10px;
                 width: 100%;
             }
             .ccw-btn {
-                width: 100%; /* Botão ocupa a largura total disponível dentro do padding do banner */
+                width: 100%;
                 flex: none;
                 padding: 14px;
                 font-size: 17px;
@@ -169,7 +174,6 @@
     <button class="seo-content-toggle" id="toggleSeoContent">View Offer Details</button>
 
     <div class="seo-content" id="seoContent">
-        <!-- Conteúdo SEO em Inglês para manter a coerência internacional -->
         <h2>MemoryON $49.98 with $774.12 Discount and 60-Day Guarantee</h2>
         <p>MemoryON is a premium high-performance brain support supplement specifically formulated to enhance memory retention, cognitive focus, and overall mental clarity. By taking advantage of this exclusive offer, you can secure your supply of MemoryON for only $49.98, representing a massive $774.12 discount off the standard retail price for our multi-bottle packages.</p>
 
@@ -190,7 +194,6 @@
             const seoContent = document.getElementById('seoContent');
             const affiliateLink = "YOUR_AFFILIATE_LINK_HERE"; 
 
-            // Aplicar link de afiliado
             document.querySelectorAll('.ccw-actions .ccw-btn, .ccw-close').forEach(el => {
                 el.href = affiliateLink;
             });
