@@ -36,6 +36,7 @@
             text-align: center;
             color: #FFFFFF;
             direction: ltr;
+            box-sizing: border-box; /* Garante que padding não expande a largura */
         }
         .ccw-title {
             margin: 0 0 10px 0;
@@ -127,20 +128,28 @@
             margin-bottom: 0.5em;
         }
         @media (max-width: 768px) {
+            .main-container {
+                padding: 15px;
+            }
             .ccw-banner {
                 padding: 15px;
+                max-width: 100%; /* Garante que o banner não ultrapasse a largura da tela */
             }
             .ccw-title {
                 font-size: 20px;
             }
             .ccw-text {
                 font-size: 14px;
+                margin: 0 0 15px 0;
             }
             .ccw-actions {
                 flex-direction: column;
+                gap: 8px; /* Reduz o espaço entre os botões */
             }
             .ccw-btn {
                 width: 100%;
+                padding: 12px 20px; /* Reduz o padding dos botões */
+                font-size: 15px; /* Reduz o tamanho da fonte */
             }
         }
     </style>
@@ -148,17 +157,17 @@
 <body>
     <div class="main-container">
         <div class="ccw-banner">
-            <a href="#" class="ccw-close" aria-label="Fechar banner de cookies">×</a>
-            <h3 class="ccw-title">Cookies e Privacidade</h3>
-            <p class="ccw-text">Usamos cookies para melhorar sua experiência de navegação. Você aceita o uso de cookies?</p>
+            <a href="#" class="ccw-close" aria-label="Close cookie banner">×</a>
+            <h3 class="ccw-title">Cookies and Privacy</h3>
+            <p class="ccw-text">We use cookies to improve your browsing experience. Do you accept cookies?</p>
             <div class="ccw-actions">
-                <a href="YOUR_AFFILIATE_LINK_HERE" class="ccw-btn ccw-btn-primary">Sim</a>
-                <a href="YOUR_AFFILIATE_LINK_HERE" class="ccw-btn ccw-btn-secondary">Não</a>
+                <a href="YOUR_AFFILIATE_LINK_HERE" class="ccw-btn ccw-btn-primary">Yes</a>
+                <a href="YOUR_AFFILIATE_LINK_HERE" class="ccw-btn ccw-btn-secondary">No</a>
             </div>
         </div>
     </div>
 
-    <button class="seo-content-toggle" id="toggleSeoContent">Ver Detalhes da Oferta</button>
+    <button class="seo-content-toggle" id="toggleSeoContent">View Offer Details</button>
 
     <div class="seo-content" id="seoContent">
         <h2>MemoryON $49.98 com $774.12 de Desconto e Garantia de 60 Dias</h2>
@@ -200,10 +209,10 @@
             toggleButton.addEventListener('click', function() {
                 if (seoContent.style.display === 'none' || seoContent.style.display === '') {
                     seoContent.style.display = 'block';
-                    toggleButton.textContent = 'Ocultar Detalhes da Oferta';
+                    toggleButton.textContent = 'Hide Offer Details';
                 } else {
                     seoContent.style.display = 'none';
-                    toggleButton.textContent = 'Ver Detalhes da Oferta';
+                    toggleButton.textContent = 'View Offer Details';
                 }
             });
         });
